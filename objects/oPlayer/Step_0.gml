@@ -74,15 +74,16 @@ var _collision = false;
 
 #region Update Sprite and Image Index
 //Updating the Sprite Index.
-//var _oldSpirte = sprite_index;
-//if ( inputMagnitude !=0 ) //stores the direction if we have no input magnitude, to sustain the direction facing.
-// ^ Additionally, because we are based on Mag, this keeps in input for animation if we run into a wall for example.
-//	{
-//		direction = inputDirection;
-//		sprite_index = spriteRun;
-//	} else sprite_index = spriteIdle;
-//if (_oldSpirte != sprite_index ) localFrame = 0;
+var _oldSpirte = sprite_index;
+if ( inputMagnitude !=0 ) //stores the direction if we have no input magnitude, to sustain the direction facing.
+ //^ Additionally, because we are based on Mag, this keeps in input for animation if we run into a wall for example.
+	{
+		direction = inputDirection;
+		sprite_index = spriteRun;
+	} else sprite_index = spriteIdle;
+if (_oldSpirte != sprite_index ) localFrame = 0;
 
 //Updating the Image Index
-image_index = PlayerAnimateSprite( direction );
+PlayerAnimateSprite()
+//image_index = PlayerAnimateSprite( direction );
 #endregion
